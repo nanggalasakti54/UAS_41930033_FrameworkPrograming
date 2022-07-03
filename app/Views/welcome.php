@@ -6,7 +6,34 @@
 </style>
 </head>
 <body>  
-
+<table border="1">
+			<form action="/" method="post">
+				<input type="text" name="id">
+				<input type="text" name="nim">
+				<button>simpan</button>
+			</form>
+		<tr>
+			<th>id</th>
+			<th>nim</th>
+		</tr>
+		<?php foreach ($dataMahasiswa as $dataMahasiswa):?>
+				<tr>
+					<td>
+					<?= esc($dataMahasiswa['id']) ?>
+					</td>
+					<td>
+					<?= esc($dataMahasiswa['nim']) ?>
+					</td>
+					<td>
+					<a href="/home/edit/<?=esc($dataMahasiswa['id']) ?>">edit</a>
+					<a href="/home/onDelete/<?=esc($dataMahasiswa['id']) ?>">delete</a>
+					</td>
+				</tr>
+				
+    </form>
+			<?php endforeach ?>
+		</table>
+	
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";

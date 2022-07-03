@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Models;
-
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class dataModel extends Model
 {
-    protected $table      = 'mahasiswa';
+    protected $table      = 'tb_mahasiswa';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
@@ -17,9 +16,9 @@ class UserModel extends Model
     protected $allowedFields = ['nim', 'nama'];
 
     protected $useTimestamps = false;
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    protected $createdField  = 'created';
+    protected $updatedField  = 'updated';
+    protected $deletedField  = 'deleted';
 
     protected $validationRules    = [];
     protected $validationMessages = [];
